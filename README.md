@@ -8,6 +8,8 @@ Ostetso is a powerful SDK and back-end platform that allows developers to add a 
 Main Functionalities
   -> Select images from Photos on your mobile device
   
-  -> After selecting user can share it on Ostetos platform or can share on other social media (facebook, Instagram or Twitter
+  -> After selecting user can share it on Ostetos platform or can share on other social media (facebook, Instagram or Twitter).
+  
   -> Once shared on Ostetos platform, User can select public/Private option.
+  
   -> If Selected Public, image gets shared on Ostetos Platform and can be view in their gallery home view. 
