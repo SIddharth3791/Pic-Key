@@ -8,11 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var picker: UIImagePickerController!
+
+    @IBOutlet weak var ImageView: UIImageView!
+    @IBOutlet weak var ShareButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Ostetso.showGallery()
+        picker = UIImagePickerController();
+        picker.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +28,32 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if  let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            
+            ImageView.image = pickedImage
+            ShareButton.isEnabled = true
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func chooseImageButtonClicked(_ sender: Any) {
+        present(self.picker, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func ShareButtonClick(_ sender: Any) {
+        
+        Ostetso.share(ImageView.image)
+        
+    }
+
+    
+    @IBAction func GalleryBackButtonClicked(_ sender: Any) {
+        
+        Ostetso.showGallery()
+    }
 
 }
 

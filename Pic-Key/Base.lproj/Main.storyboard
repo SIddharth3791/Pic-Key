@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="siN-Fy-8MM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pic_Key" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djG-Js-SuP">
+                                <rect key="frame" x="16" y="338" width="343" height="309"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="f4P-SO-otq">
+                                <rect key="frame" x="89" y="64" width="186" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="PIf-fK-1Xg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rv1-vL-5J9">
+                                <rect key="frame" x="0.0" y="225" width="375" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="0.43591099564880498" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="SMp-oS-8Ow"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="35"/>
+                                <state key="normal" title="Select Images">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImageButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDw-sF-kcU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYE-nM-zPj">
+                                <rect key="frame" x="0.0" y="271" width="375" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.57025901949602542" blue="0.15926179766564452" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Fss-yf-Nmd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="37"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ShareButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pdh-re-rTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bYE-nM-zPj" firstAttribute="top" secondItem="rv1-vL-5J9" secondAttribute="bottom" constant="8" symbolic="YES" id="3nn-er-W4s"/>
+                            <constraint firstItem="f4P-SO-otq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8Qy-1U-sC1"/>
+                            <constraint firstItem="rv1-vL-5J9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DMK-o0-P4V"/>
+                            <constraint firstItem="rv1-vL-5J9" firstAttribute="leading" secondItem="bYE-nM-zPj" secondAttribute="leading" id="F5D-D5-hhf"/>
+                            <constraint firstItem="djG-Js-SuP" firstAttribute="top" secondItem="bYE-nM-zPj" secondAttribute="bottom" constant="30" id="HeS-ph-J54"/>
+                            <constraint firstAttribute="trailing" secondItem="rv1-vL-5J9" secondAttribute="trailing" id="I4F-qP-GTF"/>
+                            <constraint firstItem="f4P-SO-otq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="73" id="IYg-j0-RJ4"/>
+                            <constraint firstAttribute="bottom" secondItem="djG-Js-SuP" secondAttribute="bottom" constant="20" symbolic="YES" id="NFP-ju-pkr"/>
+                            <constraint firstItem="bYE-nM-zPj" firstAttribute="centerX" secondItem="djG-Js-SuP" secondAttribute="centerX" id="gmS-9G-A1r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f4P-SO-otq" secondAttribute="trailing" constant="84" id="iEA-28-0dp"/>
+                            <constraint firstItem="rv1-vL-5J9" firstAttribute="top" secondItem="f4P-SO-otq" secondAttribute="bottom" constant="8" symbolic="YES" id="oqO-7x-Ccw"/>
+                            <constraint firstItem="djG-Js-SuP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qq6-Qo-PS7"/>
+                            <constraint firstItem="rv1-vL-5J9" firstAttribute="trailing" secondItem="bYE-nM-zPj" secondAttribute="trailing" id="y2l-cd-byO"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home Page" id="nR4-Sg-xCQ">
+                        <barButtonItem key="leftBarButtonItem" title="Gallery" id="lOj-UP-767">
+                            <connections>
+                                <action selector="GalleryBackButtonClicked:" destination="BYZ-38-t0r" id="Rq2-Ie-uTa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ImageView" destination="djG-Js-SuP" id="1ta-Pf-hgm"/>
+                        <outlet property="ShareButton" destination="bYE-nM-zPj" id="8hn-OL-w28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k3p-eo-X7Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="siN-Fy-8MM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zOv-Da-ui5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J9p-8z-MLJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7g5-zc-66F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="200" height="200"/>
+    </resources>
 </document>

@@ -12,6 +12,9 @@
 		1F2C0CB51E4B93830008C4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C0CB31E4B93830008C4AD /* Main.storyboard */; };
 		1F2C0CB71E4B93840008C4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C0CB61E4B93840008C4AD /* Assets.xcassets */; };
 		1F2C0CBA1E4B93840008C4AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C0CB81E4B93840008C4AD /* LaunchScreen.storyboard */; };
+		1F2C0CCB1E4BA07B0008C4AD /* Ostetso in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C0CCA1E4BA07B0008C4AD /* Ostetso */; };
+		1F2C0CCE1E4BA0CA0008C4AD /* Ostetso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2C0CCD1E4BA0CA0008C4AD /* Ostetso.framework */; };
+		1F2C0CD01E4BA0D30008C4AD /* Ostetso.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C0CCF1E4BA0D30008C4AD /* Ostetso.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,10 @@
 		1F2C0CB61E4B93840008C4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F2C0CB91E4B93840008C4AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F2C0CBB1E4B93840008C4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2C0CCA1E4BA07B0008C4AD /* Ostetso */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ostetso; sourceTree = "<group>"; };
+		1F2C0CCC1E4BA09F0008C4AD /* OstetsoBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OstetsoBridge.h; sourceTree = "<group>"; };
+		1F2C0CCD1E4BA0CA0008C4AD /* Ostetso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ostetso.framework; path = Ostetso/Ostetso.framework; sourceTree = "<group>"; };
+		1F2C0CCF1E4BA0D30008C4AD /* Ostetso.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Ostetso.bundle; path = Ostetso/Ostetso.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2C0CCE1E4BA0CA0008C4AD /* Ostetso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +46,11 @@
 		1F2C0CA31E4B93800008C4AD = {
 			isa = PBXGroup;
 			children = (
+				1F2C0CCF1E4BA0D30008C4AD /* Ostetso.bundle */,
 				1F2C0CAE1E4B93810008C4AD /* Pic-Key */,
 				1F2C0CAD1E4B93810008C4AD /* Products */,
+				1F2C0CC51E4B97AB0008C4AD /* Frameworks */,
+				1F2C0CCA1E4BA07B0008C4AD /* Ostetso */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +71,17 @@
 				1F2C0CB61E4B93840008C4AD /* Assets.xcassets */,
 				1F2C0CB81E4B93840008C4AD /* LaunchScreen.storyboard */,
 				1F2C0CBB1E4B93840008C4AD /* Info.plist */,
+				1F2C0CCC1E4BA09F0008C4AD /* OstetsoBridge.h */,
 			);
 			path = "Pic-Key";
+			sourceTree = "<group>";
+		};
+		1F2C0CC51E4B97AB0008C4AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F2C0CCD1E4BA0CA0008C4AD /* Ostetso.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +116,7 @@
 				TargetAttributes = {
 					1F2C0CAB1E4B93800008C4AD = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X33N5HMJNJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,6 +144,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2C0CCB1E4BA07B0008C4AD /* Ostetso in Resources */,
+				1F2C0CD01E4BA0D30008C4AD /* Ostetso.bundle in Resources */,
 				1F2C0CBA1E4B93840008C4AD /* LaunchScreen.storyboard in Resources */,
 				1F2C0CB71E4B93840008C4AD /* Assets.xcassets in Resources */,
 				1F2C0CB51E4B93830008C4AD /* Main.storyboard in Resources */,
@@ -206,6 +229,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -248,6 +272,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -258,10 +283,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X33N5HMJNJ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Ostetso";
 				INFOPLIST_FILE = "Pic-Key/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SiddharthPatel.Pic-Key";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pic-Key/OstetsoBridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -270,10 +300,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X33N5HMJNJ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Ostetso";
 				INFOPLIST_FILE = "Pic-Key/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SiddharthPatel.Pic-Key";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pic-Key/OstetsoBridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
